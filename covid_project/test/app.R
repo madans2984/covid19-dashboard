@@ -14,7 +14,7 @@ library(tidyr)
 library(stringr)
 
 
-# Define UI for application that draws a histogram
+# Define UI for application that displays covid counts by zipcode and date
 ui <- fluidPage(
     textInput("zipcode", "Zipcode"),
     textInput("date", "Date (YYYY-MM-DD)"),
@@ -104,7 +104,7 @@ server <- function(input, output, session) {
         
     }
     
-    # Actually function call using data entered by user
+    # Actual function call using data entered by user
     ans <- reactive(
         zip2fip(input$zipcode, input$date)
     )
