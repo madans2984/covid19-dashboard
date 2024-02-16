@@ -16,6 +16,7 @@ library(stringr)
 
 # Define UI for application that displays covid counts by zipcode and date
 ui <- fluidPage(
+    titlePanel("COVID-19 Lookup Dashboard"), # Add title here
     textInput("zipcode", "Zipcode"),
     textInput("date", "Date (YYYY-MM-DD)"),
     dataTableOutput("out")
